@@ -34,6 +34,7 @@ Partial Class PlayForm
         Me.pb_2_3 = New System.Windows.Forms.PictureBox()
         Me.pb_1_3 = New System.Windows.Forms.PictureBox()
         Me.pb_0_3 = New System.Windows.Forms.PictureBox()
+        Me.quit_btn = New System.Windows.Forms.Button()
         CType(Me.pb_0_0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_1_0, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_2_0, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,11 +157,21 @@ Partial Class PlayForm
         Me.pb_0_3.TabIndex = 9
         Me.pb_0_3.TabStop = False
         '
+        'quit_btn
+        '
+        Me.quit_btn.Location = New System.Drawing.Point(23, 501)
+        Me.quit_btn.Name = "quit_btn"
+        Me.quit_btn.Size = New System.Drawing.Size(1006, 46)
+        Me.quit_btn.TabIndex = 12
+        Me.quit_btn.Text = "Salir"
+        Me.quit_btn.UseVisualStyleBackColor = True
+        '
         'PlayForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1070, 523)
+        Me.ClientSize = New System.Drawing.Size(1056, 559)
+        Me.Controls.Add(Me.quit_btn)
         Me.Controls.Add(Me.pb_2_3)
         Me.Controls.Add(Me.pb_1_3)
         Me.Controls.Add(Me.pb_0_3)
@@ -203,4 +214,5 @@ Partial Class PlayForm
     Friend WithEvents pb_2_3 As PictureBox
     Friend WithEvents pb_1_3 As PictureBox
     Friend WithEvents pb_0_3 As PictureBox
+    Friend WithEvents quit_btn As Button
 End Class

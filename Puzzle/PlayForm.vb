@@ -109,17 +109,27 @@
 
                 Dim total_time = DateTime.Now - start_time
 
-                MsgBox(total_time.Seconds)
+                MsgBox("Congratulations " & GlobalObj.user_name & ", you do it, and you took just " & total_time.Seconds & " seconds!")
 
                 GlobalObj.Add_User(New User(GlobalObj.user_name, total_time.Seconds))
 
-                Dim menu As Menu = New Menu
-                menu.Show()
-                Me.Close()
+                quit_here()
 
             End If
 
         End If
 
     End Sub
+
+    Private Sub quit_here()
+
+        Dim menu As Menu = New Menu
+        menu.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub quit_btn_Click(sender As Object, e As EventArgs) Handles quit_btn.Click
+        quit_here()
+    End Sub
+
 End Class
